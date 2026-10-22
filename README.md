@@ -4,7 +4,7 @@
 
 This project analyzes the Online Retail II dataset to understand sales performance, customer purchasing behavior, product demand, and country-level sales patterns.
 
-The goal is to transform raw retail transaction data into actionable business insights that can support better business decisions.
+The goal is to transform raw retail transaction data into actionable business insights that support better business decisions.
 
 ## Business Objectives
 
@@ -25,77 +25,93 @@ The goal is to transform raw retail transaction data into actionable business in
 
 ## Project Workflow
 
-1. **Data Cleaning — Python & Pandas**
-   - Inspected the raw dataset.
-   - Handled duplicate records and data quality issues.
-   - Reviewed missing values and invalid transactions.
-   - Prepared the cleaned dataset for further analysis.
+### 1. Data Cleaning — Python & Pandas
 
-2. **Data Analysis — SQL Server**
-   - Analyzed sales and order performance.
-   - Examined customer purchasing frequency.
-   - Identified top-performing products.
-   - Compared sales across countries.
-   - Investigated returns and cancellations.
+- Inspected the raw dataset and its structure.
+- Identified and handled duplicate records.
+- Investigated missing values and invalid transactions.
+- Prepared the cleaned dataset for further analysis.
 
-3. **Data Visualization — Power BI**
-   - Created an Executive Overview dashboard.
-   - Analyzed customer behavior and repeat purchases.
-   - Explored product sales and demand patterns.
-   - Compared country-level sales performance.
+### 2. Data Analysis — SQL Server
+
+- Analyzed sales and order performance.
+- Examined customer purchasing frequency.
+- Identified top-performing products.
+- Compared sales performance across countries.
+- Investigated returns and cancellations.
+
+### 3. Data Visualization — Power BI
+
+Created an interactive dashboard with four analytical pages:
+
+- **Executive Overview:** Overall sales performance and key KPIs.
+- **Customer Analysis:** Customer purchasing frequency and sales contribution.
+- **Product Analysis:** Product performance and demand patterns.
+- **Country Analysis:** Geographic sales comparisons and country-level trends.
+
+## Power BI Dashboard
+
+### Executive Overview
+
+![Executive Overview](images/Executive_Overview.png)
+
+### Customer Analysis
+
+![Customer Analysis](images/Customer_Analysis.png)
+
+### Product Analysis
+
+![Product Analysis](images/Product_Analysis.png)
+
+### Country Analysis
+
+![Country Analysis](images/Country_Analysis.png)
 
 ## Key Business Findings
 
 - Total sales were approximately **10.27 million** in the dataset's transaction currency.
-- The United Kingdom was the largest market, contributing approximately **8.81 million** in sales.
-- Customer purchasing frequency showed that repeat customers represented approximately **67%** of customers with identifiable customer IDs.
-- Sales activity increased toward the end of the observed period, with November 2010 recording the highest monthly sales in the analysis.
-- Returns and cancellations were important data-quality and business considerations when evaluating sales performance.
+- The United Kingdom was the largest market, generating approximately **8.81 million** in sales.
+- Repeat customers represented approximately **66.01%** of customers with identifiable customer IDs, based on the Power BI customer analysis.
+- November 2010 recorded the highest monthly sales in the analyzed period.
+- Returns and cancellations were important considerations when evaluating sales performance.
 
-*Note: December 2010 is only partially represented in the available dataset. The dataset does not contain product cost information, so profit and profit margin were not calculated.*
+## Important Notes
 
-## Power BI Dashboard
-
-The report includes four analytical pages:
-
-1. **Executive Overview** — Overall sales performance and key KPIs.
-2. **Customer Analysis** — Customer purchasing frequency and sales contribution.
-3. **Product Analysis** — Product performance and demand patterns.
-4. **Country Analysis** — Geographic sales comparisons and country-level trends.
-
-*Dashboard screenshots will be added here.*
+- December 2010 is only partially represented in the analyzed data.
+- The dataset does not include product cost information; therefore, profit and profit margin were not calculated.
+- The analysis distinguishes sales transactions from returns, cancellations, and other transaction types.
 
 ## Dataset
 
-The project uses the **Online Retail II** dataset from the UCI Machine Learning Repository.
+**Online Retail II — UCI Machine Learning Repository**
 
 Dataset source: https://archive.ics.uci.edu/dataset/502/online+retail+ii
 
-The original dataset contains retail transactions from December 2009 to December 2011. This project analyzes the available portion used in the project workflow.
+The dataset contains retail transactions spanning December 2009 to December 2011. This project analyzes the portion processed in the project workflow.
 
 ## Repository Structure
 
 ```text
 online-retail-ii-analysis/
 ├── python/
-│   └── data_cleaning.ipynb
+│   └── data_cleaning.ipynb
 ├── sql/
-│   ├── 01_data_validation.sql
-│   ├── 02_sales_analysis.sql
-│   ├── 03_customer_analysis.sql
-│   ├── 04_product_analysis.sql
-│   └── 05_country_analysis.sql
+│   ├── 01_data_validation.sql
+│   ├── 02_sales_analysis.sql
+│   ├── 03_customer_analysis.sql
+│   ├── 04_product_analysis.sql
+│   └── 05_country_analysis.sql
 ├── powerbi/
-│   └── Online_Retail_Analysis.pbix
+│   └── Online_Retail_Analysis.pbix
 ├── images/
-│   ├── executive_overview.png
-│   ├── customer_analysis.png
-│   ├── product_analysis.png
-│   └── country_analysis.png
+│   ├── executive_overview.png
+│   ├── customer_analysis.png
+│   ├── product_analysis.png
+│   └── country_analysis.png
 └── README.md
 ```
 
-*The folder and file names above are a suggested structure; adjust them to match the actual files in this repository.*
+*The folder names above illustrate the intended organization. Actual files may vary.*
 
 ## Author
 
@@ -103,6 +119,5 @@ online-retail-ii-analysis/
 
 Aspiring Data Analyst | Python | SQL Server | Power BI
 
-GitHub: https://github.com/aymoonm
-
-LinkedIn: https://www.linkedin.com/in/mohamed-ayman-ds/
+- GitHub: https://github.com/aymoonm
+- LinkedIn: https://www.linkedin.com/in/mohamed-ayman-ds/
